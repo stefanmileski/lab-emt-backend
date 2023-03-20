@@ -30,7 +30,7 @@ public class BookController {
         return bookService.addBook(book);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
         return bookService.updateBook(id, book);
     }
@@ -40,7 +40,7 @@ public class BookController {
         bookService.deleteBook(id);
     }
 
-    @PostMapping("/{id}/rent")
+    @PutMapping("/{id}/rent")
     public Book markAsRented(@PathVariable Long id) {
         return bookService.markBookAsRented(id);
     }
